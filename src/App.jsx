@@ -88,7 +88,7 @@ const heatEmoji = heatScore >= 85 ? "🔥🔥" : heatScore >= 70 ? "🔥" : "";
     setLoading(true);
 
     try {
-      const res = await fetch(`http://localhost:8000/scan?city=${city}&state=${stateCode}`);
+      const res = await fetch(`https://vacation-scanner-backend.onrender.com/scan?city=${city}&state=${stateCode}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
       const data = await res.json();
